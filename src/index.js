@@ -15,15 +15,18 @@ class Hello extends React.Component {
 
 
 class Timer extends React.Component {
-  
-    state={
+  constructor(){
+    super();
+    this.state={
       time : new Date().toLocaleTimeString()
     }
-  
+  }
   render() { 
-    this.setState({
-      time: new Date().toLocaleTimeString()
-    })
+    setInterval(() => {
+      this.setState({
+        time: new Date().toLocaleTimeString()
+      })
+    }, 1000);
     return (
       <h2 className="timer">
       {
