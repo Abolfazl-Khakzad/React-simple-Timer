@@ -15,11 +15,19 @@ class Hello extends React.Component {
 
 
 class Timer extends React.Component {
+  
+    state={
+      time : new Date().toLocaleTimeString()
+    }
+  
   render() { 
+    this.setState({
+      time: new Date().toLocaleTimeString()
+    })
     return (
       <h2 className="timer">
       {
-      new Date().toLocaleTimeString()
+        this.state.time
       }
     </h2>
     );
@@ -43,11 +51,13 @@ class App extends React.Component {
 export default App;
 
 
-const tick=()=>{
-  
-  ReactDOM.render(<App/> , document.getElementById('root'));
-}
 
-setInterval(() => {
-  tick();
-}, 1000);
+ReactDOM.render(<App/> , document.getElementById('root'));
+// const tick=()=>{
+  
+//   ReactDOM.render(<App/> , document.getElementById('root'));
+// }
+
+// setInterval(() => {
+//   tick();
+// }, 1000);
