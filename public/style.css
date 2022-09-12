@@ -13,8 +13,11 @@
     width: 200px;
     height: 200px;
     border-radius: 50%;
-    box-shadow:0 0 50px lawngreen;
+    box-shadow:0 0 60px lawngreen;
     display: flex;
     justify-content: center;
     align-items: center;
+}
+.Hello{
+    background-color: aliceblue;
 }
